@@ -1,0 +1,28 @@
+{
+  "name": "petshop-dh-fstn18",
+  "version": "1.0.0",
+  "description": "O nosso cliente tem um petshop e gostaria de criar uma aplicação onde seja possível falar mais sobre a sua empresa e que seja possível cadastrar os pets que estão disponível para adoção e os serviços realizados pelo petshop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendelcutrim/petshop-dh-fstn18.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wendelcutrim/petshop-dh-fstn18/issues"
+  },
+  "homepage": "https://github.com/wendelcutrim/petshop-dh-fstn18#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
