@@ -66,6 +66,8 @@ Para atingir esse objetivo será necessário:
 
 -   [ ] Criar o controller para tratar estas rotas
 
+#
+
 ### **Atividade 03 - Renderização dinâmica**
 
 Nesta atividade iremos utilizar o poder do ejs para realizar a renderização dinâmica e criar nossos componentes.
@@ -108,7 +110,7 @@ Para atingir esse objetivo será necessário:
             "name": "Cuidar do pet - Diária",
             "price": 80.55,
             "description": "Cuidamos do seu pet no período da 08:00 - 18:00. Neste valor está incluso um passeio com o pet e a alimentação.",
-            "image": "https://cisavet.com.br/arquivos/banco-de-imagens/categoria-1/dicas-para-a-hora-do-passeio-com-o-pet-20180820132255.jpg"
+            "image": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fb066060-85f9-4b46-806e-33083fbbf82b/carinho-cachorro.jpg"
         },
         {
             "id": 5,
@@ -153,3 +155,30 @@ Para atingir esse objetivo será necessário:
             ```
 -   [ ] Importar o service no controller `HomeController` e utilizar o método para retornar os serviços.
 -   [ ] Renderizar os serviços cadastrados no banco de dados na view de serviços.
+
+#
+
+### **Atividade 04 - Crud de serviços**
+
+Nesta atividade iremos criar um crud de serviços
+
+**Tempo para realizar essa atividade: 30 minutos**
+
+Para atingir esse objetivo será necessário:
+
+-   [ ] Criar a view de admin para visualizar todos os serviços cadastrados, o nome da view deve ser:
+-   [ ] Criar a view para cadastro de serviços
+-   [ ] Criar a view para edição de serviços
+-   [ ] Criar o arquivo `admin.js` na pasta de rotas e criar as seguintes rotas:
+
+    -   | Route                        | Method | Param          | Description                                 |
+        | :--------------------------- | :----- | :------------- | :------------------------------------------ |
+        | `/admin/services`            | GET    |                | Deve renderizar a view `index (service)`    |
+        | `/admin/services/create`     | GET    |                | Deve renderizar a view `cadastro (service)` |
+        | `/admin/services/create`     | POST   |                |                                             |
+        | `/admin/services/:id/edit`   | GET    |                | Deve renderizar a view `editar (service)`   |
+        | `/admin/services/:id/edit`   | PUT    | `id: required` |                                             |
+        | `/admin/services/:id/delete` | DELETE | `id: required` | Deve renderizar a view `contato`            |
+        | `/admin/services/:id`        | GET    | `id: required` | Deve renderizar a view `servicos`           |
+
+-   [ ] **Obs**: Lembre-se que para trabalhar com requisições do tipo PATCH, PUT e DELETE, precisamos instalar a biblioteca `method override`

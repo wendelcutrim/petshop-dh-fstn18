@@ -2,7 +2,7 @@
     "services": [{
             "id": 1,
             "name": "Banho e tosa",
-            "price": 70.0,
+            "price": 70,
             "description": "O melhor serviço de banho e tosa da cidade!",
             "image": "https://www.revistapetcenter.com.br/wp-content/uploads/2022/07/petcenter-241-anuario-banho-e-tosa-renta%CC%81vel.jpg"
         },
@@ -25,7 +25,7 @@
             "name": "Cuidar do pet - Diária",
             "price": 80.55,
             "description": "Cuidamos do seu pet no período da 08:00 - 18:00. Neste valor está incluso um passeio com o pet e a alimentação.",
-            "image": "https://cisavet.com.br/arquivos/banco-de-imagens/categoria-1/dicas-para-a-hora-do-passeio-com-o-pet-20180820132255.jpg"
+            "image": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fb066060-85f9-4b46-806e-33083fbbf82b/carinho-cachorro.jpg"
         },
         {
             "id": 5,
@@ -33,8 +33,14 @@
             "price": 150.98,
             "description": "Realizamos atendimeto médico ao seu pet com os melhores veterinários da cidade.",
             "image": "https://fresh4pet.com.br/wp-content/uploads/2020/08/foto-blog-24-agosto-1024x756.jpg"
+        },
+        {
+            "id": "4714a62c-fb7b-43b0-a51c-dc56df76d12e",
+            "name": "Transporte",
+            "price": "49.99",
+            "description": "Transporte de pets editado",
+            "image": "https://www.petz.com.br/blog/wp-content/uploads/2017/11/caixa-transporte-gatos-cachorros-01.jpg"
         }
-
     ],
     "users": [{
             "id": 1,

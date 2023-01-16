@@ -1,0 +1,34 @@
+.services-container {
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 65vh;
+}
+
+.services-container h1 {
+	text-transform: uppercase;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.title button {
+	margin-bottom: 2rem;
+}
+
+.actions {
+	display: flex;
+	gap: 1rem;
+}
+
+table img {
+	height: 100px;
+	width: 100px;
+}
