@@ -1,3 +1,5 @@
+const Service = require('../model/Service');
+
 const HomeController = {
     showHome: (req, res) => {
         return res.render("home/");
@@ -16,7 +18,9 @@ const HomeController = {
     },
 
     showServices: (req, res) => {
-        return res.render("home/servicos");
+        const servicos = Service.findAll();
+
+        return res.render("home/servicos", { servicos });
     },
 }
 

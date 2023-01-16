@@ -19,7 +19,7 @@ As tecnologias que devem ser utilizadas para este projeto são:
 
 Nesta atividade iremos criar o servidor, instalar as principais dependências que iremos utilizar no projeto, e estruturar o projeto na arquitetura MVC.
 
-**Tempo para realizar essa atividade: 10 minutos**
+**Tempo para realizar essa atividade: 5 minutos**
 
 Para atingir esse objetivo será necessário:
 
@@ -39,7 +39,7 @@ Para atingir esse objetivo será necessário:
 
 Nesta atividade iremos criar as rotas do nosso servidor, criar os controllers e configurar o nosso template engine.
 
-**Tempo para realizar essa atividade: 10 minutos**
+**Tempo para realizar essa atividade: 15 minutos**
 
 Para atingir esse objetivo será necessário:
 
@@ -65,3 +65,91 @@ Para atingir esse objetivo será necessário:
 | `services` | GET    | Deve renderizar a view `servicos` |
 
 -   [ ] Criar o controller para tratar estas rotas
+
+### **Atividade 03 - Renderização dinâmica**
+
+Nesta atividade iremos utilizar o poder do ejs para realizar a renderização dinâmica e criar nossos componentes.
+
+**Tempo para realizar essa atividade: 20 minutos**
+
+Para atingir esse objetivo será necessário:
+
+-   [ ] Olhe cada view e verifique quais elementos podemos transformar em componentes. Dentro da nossa camada da **View** crie uma pasta chamada `components` e dentro desta pasta, crie os arquivos que você julgar necessário componentizar e insira os componentes nas views que precisam utilizar ele.
+
+    -   **Dica: Componentizar é pouparmos trabalho de repetir o mesmo código em cada view, para isso, identifique os elementos que mais se repetem na página para transforma-lo em um componente.**
+
+-   [ ] No arquivo db.json, vamos criar um banco de dados fake para conseguimos renderizar os dados, insira os seguintes dados nele:
+
+```JSON
+{
+    "services": [{
+            "id": 1,
+            "name": "Banho e tosa",
+            "price": 70.0,
+            "description": "O melhor serviço de banho e tosa da cidade!",
+            "image": "https://www.revistapetcenter.com.br/wp-content/uploads/2022/07/petcenter-241-anuario-banho-e-tosa-renta%CC%81vel.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Vacinação",
+            "price": 120,
+            "description": "Cuide da saúde do seu pet, coloque a carteira de vacinação do seu pet em dia!",
+            "image": "https://www.granvitapet.com.br/sitedata//imgsdt/geral/vacinacao-do-seu-pet.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Passeio",
+            "price": 50.97,
+            "description": "Passeamos com o seu pet. Duração do passeio: 15min",
+            "image": "https://cisavet.com.br/arquivos/banco-de-imagens/categoria-1/dicas-para-a-hora-do-passeio-com-o-pet-20180820132255.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Cuidar do pet - Diária",
+            "price": 80.55,
+            "description": "Cuidamos do seu pet no período da 08:00 - 18:00. Neste valor está incluso um passeio com o pet e a alimentação.",
+            "image": "https://cisavet.com.br/arquivos/banco-de-imagens/categoria-1/dicas-para-a-hora-do-passeio-com-o-pet-20180820132255.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Consulta veterinária",
+            "price": 150.98,
+            "description": "Realizamos atendimeto médico ao seu pet com os melhores veterinários da cidade.",
+            "image": "https://fresh4pet.com.br/wp-content/uploads/2020/08/foto-blog-24-agosto-1024x756.jpg"
+        }
+
+    ],
+    "users": [{
+            "id": 1,
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@mail.com",
+            "password": "123456",
+            "isAdmin": true
+        },
+        {
+            "id": 2,
+            "firstName": "Lorem",
+            "lastName": "Ipsum",
+            "email": "lorem@mail.com",
+            "password": "123456",
+            "isAdmin": false
+        }
+    ]
+}
+```
+
+-   [ ] Na camada model, crie o arquivo; `Service.js` neste arquivo deve ficar a lógica para consular o banco de dados
+-   [ ] Crie o método findAll() que retorne todos os serviços.
+    -   [ ] Obs: Os dados do banco de dados devem ser mapeados da seguinte maneira:
+        -   ```javascript
+              {
+                  id: ...,
+                  nome: ...,
+                  preco: R$ ... //Deve estar formatado no padrão brasileiro, para isso pode utilizar o método: toLocaleString(),
+                  descricao: ...,
+                  imagem: ...
+              }
+            ```
+-   [ ] Importar o service no controller `HomeController` e utilizar o método para retornar os serviços.
+-   [ ] Renderizar os serviços cadastrados no banco de dados na view de serviços.
